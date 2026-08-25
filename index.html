@@ -5,10 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CX Browser</title>
 <meta name="description" content="CX Browser: ein eigenständiger Electron- und React-Browser für Windows – eigene Tab-Verwaltung, strikte Sicherheitsarchitektur, geprüfte Auto-Updates." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* Schriften lokal eingebunden (nicht von Google-Servern geladen) - vermeidet die
+     DSGVO-Problematik externer Google-Fonts-Einbindung (IP-Übertragung an Google/USA). */
+  @font-face{
+    font-family:'Unbounded';
+    font-style:normal;
+    font-weight:100 900;
+    font-display:swap;
+    src:url('fonts/Unbounded-Variable.woff2') format('woff2');
+  }
+  @font-face{
+    font-family:'JetBrains Mono';
+    font-style:normal;
+    font-weight:100 900;
+    font-display:swap;
+    src:url('fonts/JetBrainsMono-Variable.woff2') format('woff2');
+  }
+
   :root{
     /* --- real CX Browser design tokens (from src/renderer/src/styles/global.css) --- */
     --bg-app:#101014;
@@ -402,6 +416,8 @@
   .footer-links{ display:flex; gap:22px; font-size:.86rem; color:var(--text-secondary); }
   .footer-links a:hover{ color:var(--text-primary); }
   .footer-version{ font-family:var(--font-mono); font-size:.74rem; color:var(--text-tertiary); }
+  .footer-legal{ margin-top:18px; padding-top:18px; border-top:1px solid var(--border-subtle); }
+  .footer-legal .footer-links{ font-size:.8rem; gap:18px; }
 </style>
 </head>
 <body>
@@ -709,6 +725,12 @@
       <a href="#support">Support</a>
     </nav>
     <span class="footer-version">v0.2.1</span>
+  </div>
+  <div class="container footer-legal">
+    <nav class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+    </nav>
   </div>
 </footer>
 

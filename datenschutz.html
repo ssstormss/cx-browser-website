@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Datenschutzerklärung &ndash; CX Browser</title>
+<meta name="description" content="Datenschutzerklärung von CX Browser gemäß DSGVO." />
+<style>
+  @font-face{
+    font-family:'Unbounded';
+    font-style:normal;
+    font-weight:100 900;
+    font-display:swap;
+    src:url('fonts/Unbounded-Variable.woff2') format('woff2');
+  }
+  @font-face{
+    font-family:'JetBrains Mono';
+    font-style:normal;
+    font-weight:100 900;
+    font-display:swap;
+    src:url('fonts/JetBrainsMono-Variable.woff2') format('woff2');
+  }
+
+  :root{
+    --bg-app:#101014;
+    --bg-chrome:#17171d;
+    --bg-surface:#1c1c24;
+    --border-subtle:rgba(255,255,255,.08);
+    --border-strong:rgba(255,255,255,.14);
+    --text-primary:#f3f3f7;
+    --text-secondary:#a3a3b3;
+    --text-tertiary:#6f6f80;
+    --accent:#6d5efc;
+    --success:#3ddc97;
+    --grad-a:#00D9FF;
+    --grad-b:#7C3AED;
+    --grad-c:#FF3D8A;
+    --radius-md:10px;
+
+    --font-display:'Unbounded','Segoe UI',system-ui,sans-serif;
+    --font-body:'Segoe UI Variable','Segoe UI',system-ui,-apple-system,sans-serif;
+    --font-mono:'JetBrains Mono','SFMono-Regular',Consolas,monospace;
+    color-scheme: dark;
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg-app); color:var(--text-primary);
+    font-family:var(--font-body); line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--grad-a); text-decoration:underline; text-underline-offset:2px; word-break:break-word; }
+  a:hover{ color:var(--text-primary); }
+  h1,h2{ font-family:var(--font-display); font-weight:700; text-wrap:balance; }
+  code{ font-family:var(--font-mono); font-size:.9em; background:var(--bg-surface); padding:.1em .4em; border-radius:4px; }
+
+  header{
+    border-bottom:1px solid var(--border-subtle); background:var(--bg-chrome);
+    padding:16px clamp(20px,4vw,48px);
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{ display:flex; align-items:center; gap:9px; color:var(--text-primary); text-decoration:none; font-family:var(--font-display); font-weight:700; font-size:.86rem; }
+  .back{ font-family:var(--font-mono); font-size:.78rem; color:var(--text-secondary); text-decoration:none; }
+  .back:hover{ color:var(--text-primary); }
+
+  main{ max-width:680px; margin:0 auto; padding:clamp(40px,7vw,72px) clamp(20px,4vw,48px) 100px; }
+  .eyebrow{
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--text-tertiary);
+  }
+  h1{ font-size:clamp(1.8rem,4vw,2.4rem); margin:.5em 0 0; }
+  .stand{ font-family:var(--font-mono); font-size:.76rem; color:var(--text-tertiary); margin-top:10px; }
+
+  nav.toc{
+    margin-top:32px; border:1px solid var(--border-subtle); border-radius:var(--radius-md);
+    background:var(--bg-chrome); padding:18px 22px;
+  }
+  nav.toc p{ font-family:var(--font-mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-tertiary); margin:0 0 10px; }
+  nav.toc ol{ margin:0; padding-left:1.1em; color:var(--text-secondary); font-size:.9rem; }
+  nav.toc li{ margin:4px 0; }
+  nav.toc a{ text-decoration:none; }
+  nav.toc a:hover{ text-decoration:underline; }
+
+  section{ margin-top:44px; scroll-margin-top:20px; }
+  h2{ font-size:1.1rem; margin:0 0 12px; display:flex; align-items:baseline; gap:.5em; }
+  h2 .num{ font-family:var(--font-mono); font-size:.75em; color:var(--grad-a); }
+  p{ color:var(--text-secondary); margin:0 0 14px; }
+  ul{ color:var(--text-secondary); margin:0 0 14px; padding-left:1.2em; }
+  li{ margin:4px 0; }
+  .card{
+    border:1px solid var(--border-strong); border-radius:var(--radius-md);
+    background:var(--bg-chrome); padding:22px 24px; margin-top:8px;
+  }
+  .card p{ margin:0; color:var(--text-primary); }
+  .badge-ok{
+    display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:.78rem;
+    color:var(--success); background:rgba(61,220,151,.12); border:1px solid rgba(61,220,151,.3);
+    padding:6px 12px; border-radius:999px; margin-bottom:14px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">
+    <svg width="20" height="20" viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <linearGradient id="cxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00D9FF"/>
+          <stop offset="50%" stop-color="#7C3AED"/>
+          <stop offset="100%" stop-color="#FF3D8A"/>
+        </linearGradient>
+      </defs>
+      <rect width="100" height="100" rx="22" fill="url(#cxGrad)"/>
+      <circle cx="50" cy="50" r="29.4" fill="none" stroke="#fff" stroke-width="8.2"/>
+      <circle cx="50" cy="50" r="5.2" fill="#fff"/>
+    </svg>
+    CX Browser
+  </a>
+  <a class="back" href="index.html">&larr; Zurück zur Startseite</a>
+</header>
+
+<main>
+  <p class="eyebrow">Rechtliches</p>
+  <h1>Datenschutzerklärung</h1>
+  <p class="stand">Stand: August 2026</p>
+
+  <span class="badge-ok">&#10003; Keine Cookies &middot; kein Tracking &middot; keine Analyse-Tools</span>
+
+  <nav class="toc" aria-label="Inhaltsverzeichnis">
+    <p>Inhalt</p>
+    <ol>
+      <li><a href="#verantwortlicher">Verantwortlicher</a></li>
+      <li><a href="#hosting">Hosting &amp; Server-Logfiles</a></li>
+      <li><a href="#schriften">Schriftarten</a></li>
+      <li><a href="#downloadcheck">Aktualitätsprüfung für Downloads</a></li>
+      <li><a href="#cookies">Cookies &amp; lokale Speicherung</a></li>
+      <li><a href="#email">Kontakt per E-Mail</a></li>
+      <li><a href="#discord">Discord-Link</a></li>
+      <li><a href="#rechte">Deine Rechte</a></li>
+      <li><a href="#beschwerde">Beschwerderecht</a></li>
+    </ol>
+  </nav>
+
+  <section id="verantwortlicher">
+    <h2><span class="num">01</span> Verantwortlicher</h2>
+    <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+    <div class="card">
+      <p>Raphael Krämer<br>
+      Elly-Heuss-Knapp-Weg 12<br>
+      71116 Gärtringen, Deutschland<br>
+      E-Mail: <a href="mailto:support@cxprojekt.de">support@cxprojekt.de</a><br>
+      Telefon: +49 176 70328053</p>
+    </div>
+  </section>
+
+  <section id="hosting">
+    <h2><span class="num">02</span> Hosting &amp; Server-Logfiles</h2>
+    <p>Diese Website wird über GitHub Pages gehostet, einen Dienst von GitHub, Inc. / Microsoft Corporation, One Microsoft Way, Redmond, WA 98052, USA. Beim Aufruf dieser Website erfasst der Hosting-Provider automatisch technische Zugriffsdaten in sogenannten Server-Logfiles, u. a.:</p>
+    <ul>
+      <li>IP-Adresse</li>
+      <li>Datum und Uhrzeit des Zugriffs</li>
+      <li>aufgerufene Datei / URL</li>
+      <li>verwendeter Browser und Betriebssystem</li>
+      <li>Referrer-URL (die zuvor besuchte Seite)</li>
+    </ul>
+    <p>Diese Verarbeitung ist technisch notwendig, damit dir die Website überhaupt ausgeliefert werden kann, und dient der Systemsicherheit. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionsfähigen und sicheren Website).</p>
+    <p>Da GitHub, Inc. ihren Sitz in den USA hat, kann es bei diesem Vorgang zu einer Übermittlung deiner IP-Adresse in die USA kommen. Weitere Informationen: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
+  </section>
+
+  <section id="schriften">
+    <h2><span class="num">03</span> Schriftarten</h2>
+    <p>Diese Website nutzt die Schriftarten „Unbounded" und „JetBrains Mono". Beide Schriftdateien liegen lokal auf diesem Server &ndash; es findet <strong>keine</strong> Verbindung zu Google-Servern oder einem anderen Schriftarten-Anbieter statt, und es werden dabei keine Daten an Dritte übertragen.</p>
+  </section>
+
+  <section id="downloadcheck">
+    <h2><span class="num">04</span> Aktualitätsprüfung für Downloads</h2>
+    <p>Bereits beim Laden dieser Seite &ndash; nicht erst beim Klick auf einen Download-Button &ndash; ruft dein Browser automatisch die Datei <code>updates.veilgard.de/metadata/stable.json</code> ab, um dir immer die aktuellste CX-Browser-Version anzubieten. Dabei wird, wie bei jedem Aufruf einer Website technisch üblich, deine IP-Adresse an diesen (ebenfalls von uns betriebenen) Server übertragen und kurzzeitig in dessen Server-Logfiles verarbeitet. Eine darüberhinausgehende Auswertung oder Zusammenführung mit anderen Daten findet nicht statt.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse daran, dir stets funktionierende, aktuelle Download-Links anzubieten).</p>
+  </section>
+
+  <section id="cookies">
+    <h2><span class="num">05</span> Cookies &amp; lokale Speicherung</h2>
+    <p>Diese Website setzt keine Cookies und speichert keine Daten dauerhaft in deinem Browser. Es werden keine Analyse-, Marketing- oder Tracking-Tools eingesetzt.</p>
+  </section>
+
+  <section id="email">
+    <h2><span class="num">06</span> Kontakt per E-Mail</h2>
+    <p>Wenn du mich per E-Mail unter <a href="mailto:support@cxprojekt.de">support@cxprojekt.de</a> kontaktierst, werden deine Angaben (E-Mail-Adresse und Inhalt deiner Nachricht) ausschließlich zur Bearbeitung deiner Anfrage verarbeitet und gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO (Bearbeitung deiner Anfrage bzw. berechtigtes Interesse an einer Antwort). Diese Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+  </section>
+
+  <section id="discord">
+    <h2><span class="num">07</span> Discord-Link</h2>
+    <p>Der Button „Discord beitreten" führt dich zur externen Plattform Discord (Discord Inc. / Discord Netherlands B.V.). Sobald du diesen Link anklickst, verlässt du diese Website, und es gilt die Datenschutzerklärung von Discord: <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">discord.com/privacy</a>. Auf die dortige Datenverarbeitung habe ich keinen Einfluss.</p>
+  </section>
+
+  <section id="rechte">
+    <h2><span class="num">08</span> Deine Rechte</h2>
+    <p>Dir stehen bezüglich deiner personenbezogenen Daten folgende Rechte zu:</p>
+    <ul>
+      <li>Auskunft über die verarbeiteten Daten (Art. 15 DSGVO)</li>
+      <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+      <li>Löschung deiner Daten (Art. 17 DSGVO)</li>
+      <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+    </ul>
+    <p>Wende dich dafür einfach an die oben genannte Kontaktadresse.</p>
+  </section>
+
+  <section id="beschwerde">
+    <h2><span class="num">09</span> Beschwerderecht bei einer Aufsichtsbehörde</h2>
+    <p>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten zu beschweren. Zuständig ist in der Regel die Behörde deines gewöhnlichen Aufenthaltsorts. Für den Verantwortlichen dieser Website zuständig:</p>
+    <div class="card">
+      <p>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg<br>
+      Lautenschlagerstraße 20, 70173 Stuttgart<br>
+      <a href="https://www.baden-wuerttemberg.datenschutz.de/" target="_blank" rel="noopener noreferrer">baden-wuerttemberg.datenschutz.de</a></p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
